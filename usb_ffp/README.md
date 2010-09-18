@@ -7,7 +7,7 @@ Running ffp from a pen drive.
 The following steps were done on a PC booted using a Gentoo LiveCD, though most Linux distributions should work.
 
 1. Determine which drive letter the pen drive is:
-#	
+<!-- -->
 	# fdisk -l
 
 2. Remove any existing data on the pen drive:
