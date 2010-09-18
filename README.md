@@ -1,6 +1,17 @@
+Assumptions
+-----------
+
+These instructions will make a few assumptions regarding the setup of the DNS-323.
+* The primary storage mount point is: `/mnt/HD_a2`
+** This is true for most setups (e.g. mirrored and striped) but if your setup involves two JBOD drives then depending on where you want various files stored, some references to `/mnt/HD_a2 may` need to be replaced with, for example, `/mnt/HD_b2`.
+* These instructions were written with a DNS-323 hardware revision B available, if you have a different hardware revision then some procedures may vary.
+
+
 Installation
 ------------
 
+### [fonz's fun_plug][ffp]
+1. Copy [fun\_plug][fun_plug] and [fun\_plug.tgz][fun_plug.tgz] to Volume 1 and reboot. If successful, the fun_plug.tgz file is unpacked (ffp directory) and deleted. A telnet server is started.
 
 
 Optional
@@ -11,7 +22,7 @@ Optional
 	# usermod -d /ffp/home/root/ root
 	# store-passwd.sh
 
-### [ffp packages]
+### [ffp packages][]
 	# mkdir /ffp/pkg/
 	# cd /ffp/pkg/
 	# rsync -av --delete inreto.de::dns323/fun-plug/0.5/packages .
@@ -24,23 +35,16 @@ Optional
 	# funpkg -i /ffp/pkg/additional/app-editors/nano-2.0.9-2.tgz
 	# cp -i /ffp/etc/examples/nanorc /ffp/etc/
 
+### git
+Requires that optware be setup first.
+	# wget http://ipkg.nslu2-linux.org/feeds/optware/dns323/cross/unstable/git_1.7.2.3-1_arm.ipk
+
+
 Pen Drive
 ---------
-Running ffp from a pen drive.
 
-### Partitioning/formatting the pen drive
-The following steps were done on a PC booted using a Gentoo LiveCD, though any Linux distribution should work.
-Determine which drive letter the pen drive is:
-	# fdisk -l
-Remove any existing data on the pen drive:
-	# dd if=/dev/zero of=/dev/sdX # where X is the device letter for the pen drive
-Setup the partitions on the pen drive.
-e.g. I had a 2GB pen drive and made one "type 82 (Swap)" 1GB partition and two "type 83 (Linux)" 500MB partitions:
-	# cfdisk /dev/sdX # where X is the device letter for the pen drive
-Format the pen drive partitions:
-	# mkswap /dev/sdX0 # where X is the device letter for the pen drive
-	# mke2fs -j /dev/sdX1 # where X is the device letter for the pen drive
-	# mke2fs -j /dev/sdX2 # where X is the device letter for the pen drive
+For running ffp off of a USB pen drive connected to your DNS-323, see instructions in the [usb_ffp folder][].
+
 
 Packages
 --------
@@ -51,12 +55,17 @@ Packages
 
 Resources
 ---------
+* [DNS-323 Wiki][dns323 wiki]
 * [CH3SNAS Tutorials][ch3nas tutorials]
 
 
 [ffp]: http://www.inreto.de/dns323/fun-plug/0.5/
+[fun_plug]: http://www.inreto.de/dns323/fun-plug/0.5/fun_plug
+[fun_plug.tgz]: http://www.inreto.de/dns323/fun-plug/0.5/fun_plug.tgz
 [ffp packages]: http://www.inreto.de/dns323/fun-plug/0.5/packages/
 [uli packages]: http://ffp.wolf-u.li/
 [nano package]: http://nas-tweaks.net/CH3SNAS:Tutorials/nano
 [persistent root home]: http://nas-tweaks.net/CH3SNAS:Tutorials/Private-Public-Key-Authentication
+[dns323 wiki]: http://wiki.dns323.info/
 [ch3nas tutorials]: http://nas-tweaks.net/CH3SNAS:Tutorials
+[usb_ffp folder]: ./usb_ffp

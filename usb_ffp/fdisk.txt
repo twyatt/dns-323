@@ -1,0 +1,11 @@
+$ fdisk -l
+
+Disk /dev/sdX: 2019 MB, 2019557376 bytes
+63 heads, 62 sectors/track, 1009 cylinders
+Units = cylinders of 3906 * 512 = 1999872 bytes
+Disk identifier: 0x00000000
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdX1               1         500      976469   82  Linux swap / Solaris
+/dev/sdX2             501         750      488250   83  Linux
+/dev/sdX3             751        1009      505827   83  Linux

@@ -1,0 +1,12 @@
+$ du -sh
+1.9G	.
+
+$ time cp -v * /Volumes/Volume_1/test/ # swap on pen
+real	4m55.086s
+user	0m0.019s
+sys	0m6.245s
+
+$ time cp -v * /Volumes/Volume_1/test/ # swap on hdd
+real	4m54.195s
+user	0m0.019s
+sys	0m6.316s
