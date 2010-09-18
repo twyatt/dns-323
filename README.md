@@ -33,7 +33,7 @@ Optional
 	# rsync -av --delete wolf-u.li::ffp/additional .
 
 ### [nano][nano package]
-Requires [Uli's packages][uli packages].
+> Requires [Uli's packages][uli packages].
 
 	# funpkg -i /ffp/pkg/additional/app-editors/nano-2.0.9-2.tgz
 	# cp -i /ffp/etc/examples/nanorc /ffp/etc/
@@ -42,7 +42,7 @@ Requires [Uli's packages][uli packages].
 Pen Drive
 ---------
 
-For running *ffp* off of a USB pen drive connected to your DNS-323, see instructions in the [usb_ffp][usb_ffp folder].
+For running **ffp** off of a USB pen drive connected to your DNS-323, see instructions in the [usb_ffp][usb_ffp folder] folder.
 
 
 Packages
