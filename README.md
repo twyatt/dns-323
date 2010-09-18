@@ -68,4 +68,4 @@ Resources
 [persistent root home]: http://nas-tweaks.net/CH3SNAS:Tutorials/Private-Public-Key-Authentication
 [dns323 wiki]: http://wiki.dns323.info/
 [ch3nas tutorials]: http://nas-tweaks.net/CH3SNAS:Tutorials
-[usb_ffp folder]: http://github.com/twyatt/dns-323/usb_ffp
+[usb_ffp folder]: http://github.com/twyatt/dns-323/tree/master/usb_ffp/
