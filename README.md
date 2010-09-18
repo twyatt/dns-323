@@ -2,6 +2,7 @@ Assumptions
 -----------
 
 These instructions will make a few assumptions regarding the setup of the DNS-323.
+
 * The primary storage mount point is: `/mnt/HD_a2`
 ** This is true for most setups (e.g. mirrored and striped) but if your setup involves two JBOD drives then depending on where you want various files stored, some references to `/mnt/HD_a2 may` need to be replaced with, for example, `/mnt/HD_b2`.
 * These instructions were written with a DNS-323 hardware revision B available, if you have a different hardware revision then some procedures may vary.
