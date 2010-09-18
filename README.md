@@ -4,8 +4,8 @@ Assumptions
 These instructions will make a few assumptions regarding the setup of the DNS-323.
 
 * The primary storage mount point is: `/mnt/HD_a2`
-** This is true for most setups (e.g. mirrored and striped) but if your setup involves two JBOD drives then depending on where you want various files stored, some references to `/mnt/HD_a2 may` need to be replaced with, for example, `/mnt/HD_b2`.
-* These instructions were written with a DNS-323 hardware revision B available, if you have a different hardware revision then some procedures may vary.
+	* This is true for most setups (e.g. mirrored and striped) but if your setup involves two JBOD drives then depending on where you want various files stored, some references to `/mnt/HD_a2` may need to be replaced with, for example, `/mnt/HD_b2`.
+* These instructions were written with a DNS-323 hardware rev. B available, if you have a different hardware revision then some procedures may vary.
 
 
 Installation
@@ -33,6 +33,8 @@ Optional
 	# rsync -av --delete wolf-u.li::ffp/additional .
 
 ### [nano][nano package]
+Requires [Uli's packages][uli packages].
+
 	# funpkg -i /ffp/pkg/additional/app-editors/nano-2.0.9-2.tgz
 	# cp -i /ffp/etc/examples/nanorc /ffp/etc/
 
@@ -44,7 +46,7 @@ Requires that optware be setup first.
 Pen Drive
 ---------
 
-For running ffp off of a USB pen drive connected to your DNS-323, see instructions in the [usb_ffp folder][].
+For running ffp off of a USB pen drive connected to your DNS-323, see instructions in the [usb_ffp][usb_ffp folder].
 
 
 Packages
